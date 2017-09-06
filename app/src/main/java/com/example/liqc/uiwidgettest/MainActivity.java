@@ -1,6 +1,8 @@
 package com.example.liqc.uiwidgettest;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,9 +32,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                }else {
 //                    progressBar.setVisibility(View.GONE);
 //                }
-                int progress = progressBar.getProgress();
-                progress = progress + 10;
-                progressBar.setProgress(progress);
+//                int progress = progressBar.getProgress();
+//                progress = progress + 10;
+//                progressBar.setProgress(progress);
+//                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+//                dialog.setTitle("This is Dialog");
+//                dialog.setMessage("Something important.");
+//                dialog.setCancelable(false);
+//                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                    }
+//                });
+//                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                    }
+//                });
+//                dialog.show();
+                ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setTitle("This is ProgressDialog");
+                progressDialog.setMessage("Loading...");
+                progressDialog.setCancelable(true);
+                progressDialog.show();
                 break;
             default:
                 break;
